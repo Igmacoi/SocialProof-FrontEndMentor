@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+:root{
+    /*Primary*/
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    /*Neutral*/
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+                      url(../images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right 60vw bottom 50vh, left 10vw top 20vh;
+}
+
+
+
+main,
+.info,
+.rated,
+.rated div,
+.comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main{
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 80%;
+    margin: auto;
+    font-size: 15px;
+}
+
+.info{
+    margin-bottom: 4rem;
+}
+.products{
+    width: 40%;
+}
+.products h1{
+    color: var(--Very-Dark-Magenta);
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.products p{
+    color: var(--Dark-Grayish-Magenta);
+    padding-right: 4rem;
+}
+
+/* Rated Star*/
+.rated{
+    width: 60%;
+    flex-direction: column;
+}
+.rated div{
+    background-color: var(--Light-Grayish-Magenta);
+    width: 21rem;
+    padding: .3rem;
+    margin-block: .5rem;
+    border-radius: .5rem;
+    gap: 1rem;
+}
+
+.rated div .stars{
+    gap: 0.5rem;
+    width: 35%;
+}
+
+
+.rated div p{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+.rated .Reviews{
+    margin-left: -3rem;
+}
+.rated .BestTech{
+    margin-right: -3rem;
+}
+
+/* Comments Users */
+.comments{
+    gap: 2rem;
+    color: var(--White);
+}
+.containerReview{
+    background-color: var(--Very-Dark-Magenta);
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    border-radius: .5rem;
+
+}
+.comments .containerReview .user{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+.comments .containerReview .user img{
+    border-radius: 50%;
+    width: 3rem ;
+    margin-right: 1rem;
+}
+.comments .containerReview .review{
+    padding: 0 1.5rem 1.5rem 1.5rem ;
+    margin: auto;
+}
+.comments .containerReview .user .infouser .buyer{
+    color: var(--Soft-Pink);
+}
+.comments .Colton{
+    margin-top: -2rem;
+}
+.comments .Anne{
+    margin-bottom:  -2rem;
+}
+
+
+.attribution {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+.attribution a {
+    color: var(--Very-Dark-Magenta);
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px ) {
+    main{
+        flex-direction: column;
+        margin-top: 2rem;
+        width: 90%;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .rated div{
+        width: 100%;
+    }
+    .products h1, .products p{
+        padding: 0 0 1rem 0 ;
+    }
+    .rated .Reviews,
+    .rated .Report,
+    .rated .BestTech{
+        flex-direction: column;
+    }
+    .products, .rated{
+        width: 100%;
+    }
+    .rated .Reviews{
+        margin-left: 0;
+    }
+    .rated .BestTech{
+        margin-right: 0;
+    }
+
+    .comments{
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .containerReview{
+        width: 100%;
+    }
+
+}
